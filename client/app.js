@@ -7,20 +7,21 @@ Template.main.helpers({
 });
 Template.list.helpers({
   cards: function () {
-    return Cards.find({}, {
+    return Cards.find({column: this.valueOf().id}, {
       sort: { order: 1 },
     });
   },
   cardsOptions: {
       group: {
-        name: 'list',
-        put: true
+        name: "cards",
+        put: true,
+        pull: true
     },
     sort: true,
-    onSort: function (event) {
-      console.log('Item %s went from #%d to #%d',
-          event.data.name, event.oldIndex, event.newIndex
-      );
+    onAdd : function(/**Event*/event) {
+      console.log(event.data._id);
+      delete event.data._id;
+      event.data.column = 1;
     }
   }
 });
