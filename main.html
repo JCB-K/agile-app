@@ -1,0 +1,25 @@
+<head>
+  <title>Agile App</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+{{>main}}
+</body>
+
+<template name="main">
+{{#each columns}}
+  {{> list}}
+{{/each}}
+</template>
+
+<template name="list">
+  <ul>
+  <h1>{{this.title}}</h1>
+    {{#sortable items=cards options=cardsOptions}}
+      <li>
+        #{{order}} - {{title}}
+      </li>
+    {{/sortable}}
+  </ul>
+</template>
