@@ -1,0 +1,55 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column{
+    display: inline-block;
+    vertical-align: top;
+    direction: ltr;
+    width: 32%;
+    background: gray;
+    padding: 1em;
+    border-radius: 6px;
+}
+
+.column ul{
+    padding: 0;
+}
+
+.card{
+    width: 100%;
+    padding: 0 1em;
+    margin-top: 1em;
+    list-style: none;
+    background: #efefef;
+    border-radius: 3px;
+}
+
+
+/* Typography */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #f2f2f2;
+    font-size: 14px;
+}
+
+p{
+    font-size: 0.9em;
+    line-height: 1.3em;
+}
+h1{
+    margin: 0;
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+p{
+    margin: 0.2em 0 1em 0;
+}

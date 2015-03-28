@@ -1,6 +1,7 @@
 <head>
   <title>Agile App</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -14,12 +15,17 @@
 </template>
 
 <template name="list">
-  <ul>
-  <h1>{{this.title}}</h1>
-    {{#sortable items=cards options=cardsOptions}}
-      <li>
-        #{{order}} - {{title}}
-      </li>
-    {{/sortable}}
-  </ul>
+<div class="column">
+    <h1>{{this.title}}</h1>
+    <ul data-id="{{this.id}}">
+      <!--<li></li>-->
+      {{#sortable items=cards options=cardsOptions}}
+        <li class="card">
+          <!-- #{{order}} - {{title}} -->
+          <h2>Finish this app</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        </li>
+      {{/sortable}}
+    </ul>
+</div>
 </template>
