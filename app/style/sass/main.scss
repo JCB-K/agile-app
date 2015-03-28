@@ -1,17 +1,11 @@
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+@import 'lib/normalize';
 
 .column{
     display: inline-block;
     vertical-align: top;
     direction: ltr;
     width: 32%;
-    background: gray;
+    background: blue;
     padding: 1em;
     border-radius: 6px;
 }
