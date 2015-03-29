@@ -10,19 +10,6 @@ Template.list.helpers({
     return Cards.find({column: this.valueOf().id}, {
       sort: { order: 1 },
     });
-  },
-  cardsOptions: {
-      group: {
-        name: "cards",
-        put: true,
-        pull: true
-    },
-    sort: true,
-    onAdd : function(/**Event*/event) {
-      console.log(event.data._id);
-      delete event.data._id;
-      event.data.column = 1;
-    }
   }
 });
 

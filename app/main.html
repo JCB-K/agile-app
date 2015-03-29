@@ -19,13 +19,13 @@
     <h1>{{this.title}}</h1>
     <ul data-id="{{this.id}}">
       <!--<li></li>-->
-      {{#sortable items=cards options=cardsOptions}}
+      {{#each cards}}
         <li class="card">
           <!-- #{{order}} - {{title}} -->
           <h2>Finish this app</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
         </li>
-      {{/sortable}}
+      {{/each}}
     </ul>
 </div>
 </template>
