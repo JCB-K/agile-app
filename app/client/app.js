@@ -58,4 +58,27 @@ Template.column.rendered = function(){
   }).disableSelection();
 };
 
+Template.columns.events({
+  "submit .new-card": function (event) {
+
+    var title = event.target.title.value;
+    var desc = event.target.description.value;
+
+    console.log(order[0]);
+
+    Cards.insert({
+      title: title,
+      description: desc,
+      createdAt: new Date(),
+      column: 1,
+      order: 1
+    });
+
+    // event.target.reset();
+
+    // Prevent default form submit
+    return false;
+  }
+});
+
 

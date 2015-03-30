@@ -1,4 +1,9 @@
 <template name="columns">
+  <form class="new-card">
+      <input type="text" name="title" placeholder="Title" />
+      <input type="text" name="description" placeholder="Description" />
+      <input type="submit">
+  </form>
   {{#each columns}}
     {{>column}}
   {{/each}}
