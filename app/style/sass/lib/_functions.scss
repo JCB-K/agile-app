@@ -1,0 +1,32 @@
+/**
+ * Respond Mixin
+ *
+ * Example: @include respond-to(mobile) { float: none; }
+ */
+
+@mixin respond-to($media, $min-or-max: max) {
+
+    @if $media == mobile {
+            @media only screen and ($min-or-max + -width: 570px) { @content; }
+        }
+        @else if $media == tablet {
+            @media only screen and ($min-or-max + -width: 820px) { @content; }
+        }
+        @else if $media == desktop {
+            @media only screen and ($min-or-max + -width: 992px) { @content; }
+        }
+        @else if $media == fullwidth{
+            @media only screen and ($min-or-max + -width: 1172px) { @content; }
+
+        }
+
+    @else if $media == retina {
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+               only screen and (-o-min-device-pixel-ratio: 3/2),
+               only screen and (min--moz-device-pixel-ratio: 1.5),
+               only screen and (min-device-pixel-ratio: 1.5) { @content; }
+    }
+    @else if $media == ie {
+        .ie7 { @content; }
+    }
+}

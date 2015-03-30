@@ -356,25 +356,41 @@ td,
 th {
   padding: 0; }
 
+/**
+ * Respond Mixin
+ *
+ * Example: @include respond-to(mobile) { float: none; }
+ */
 .column {
   display: inline-block;
   vertical-align: top;
   direction: ltr;
-  width: 32%;
-  background: blue;
+  width: 30%;
+  background: gray;
   padding: 1em;
-  border-radius: 6px; }
+  border-radius: 6px;
+  background-image: -webkit-linear-gradient(bottom, #c7defe, #d6e7fe);
+  border: 0.5px solid #5f72a4; }
+  @media only screen and (max-width: 570px) {
+    .column {
+      width: 100%;
+      margin-top: 1em; } }
 
 .column ul {
   padding: 0; }
 
 .card {
-  width: 100%;
-  padding: 0 1em;
+  width: 90%;
+  padding: 1em;
   margin-top: 1em;
   list-style: none;
   background: #efefef;
+  border: 0.5px solid #5f72a4;
   border-radius: 3px; }
+
+.card--empty {
+  border: none;
+  padding: 0; }
 
 /* Typography */
 body {
@@ -386,13 +402,14 @@ p {
   font-size: 0.9em;
   line-height: 1.3em; }
 
-h1 {
-  margin: 0; }
-
-h2 {
-  margin-bottom: 0; }
+h1, h2 {
+  margin: 0 0 1em; }
 
 p {
   margin: 0.2em 0 1em 0; }
+
+a {
+  color: #141823;
+  text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */

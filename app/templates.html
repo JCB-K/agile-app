@@ -13,13 +13,12 @@
   <div class="column">
       <h1>{{this.title}}</h1>
       <ul>
-      <li></li>
+        <li class="card card--empty"></li>
         {{#each cards}}
-        <a href="/card/{{_id}}">
+        <a href="/card/{{_id}}" class="card__link">
           <li class="card">
-            #{{_id}} - {{title}}
-            <h2>Finish this app</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <h2 class="card__title">{{title}}</h2>
+            <p class="card__description">{{description}}</p>
           </li>
         </a>
         {{/each}}

@@ -5,7 +5,7 @@ Meteor.startup(function () {
     var items = [
       {title: "Test on Internet Explorer", description: "We haven't tested the app on IE yet. We also need to decide how which IE versions we will support.", order: 1, column: 1},
       {title: "User-defined columns", description: "A cool feature would be to let users define their own columns, instead of being stuck with idea/doing/done", order: 2, column: 1},
-      {title: "Inline editing", descripion: "after creating a card the user should be able to edit the title and description, preferably inline", order: 1, column: 2},
+      {title: "Inline editing", description: "after creating a card the user should be able to edit the title and description, preferably inline", order: 1, column: 2},
       {title: "Reordering", description: "The user should be able to reorder items in each column, to indicate priority", order: 1, column: 3}
       ];
     _.each(items, function (item) {
