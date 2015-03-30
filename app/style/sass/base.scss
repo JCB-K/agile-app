@@ -1,0 +1,19 @@
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+$base: 1em;
+$black: rgb(20, 24, 35);
+$lightGray: lighten($black, 40);
+$darkGray: lighten($black, 10);
+
+$blue: #c7defe;
+$darkBlue: darken($blue, 30);
+
+
+$border: 0.5px solid $darkGray;
+$blueBackground: -webkit-linear-gradient(bottom, $blue, lighten($blue, 3));

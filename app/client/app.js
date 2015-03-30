@@ -64,8 +64,6 @@ Template.columns.events({
     var title = event.target.title.value;
     var desc = event.target.description.value;
 
-    console.log(order[0]);
-
     Cards.insert({
       title: title,
       description: desc,

@@ -1,8 +1,14 @@
 <template name="columns">
   <form class="new-card">
-      <input type="text" name="title" placeholder="Title" />
-      <input type="text" name="description" placeholder="Description" />
-      <input type="submit">
+    <ul class="form">
+      <li class="field"><input type="text" name="title" placeholder="Title" /></li>
+      <li class="field"><textarea type="text" name="description" placeholder="Description"></textarea></li>
+      <li class="field"><input type="submit" class="button"></li>
+
+    </ul>
+
+
+
   </form>
   {{#each columns}}
     {{>column}}
@@ -13,21 +19,27 @@
   <div class="column">
       <h1>{{this.title}}</h1>
       <ul>
-        <li class="card card--empty"></li>
+        <li class="card card--column card--empty"></li>
         {{#each cards}}
-        <a href="/card/{{_id}}" class="card__link">
-          <li class="card">
+
+          <li class="card card--column">
+          <a href="/card/{{_id}}" class="card__link">
             <h2 class="card__title">{{title}}</h2>
             <p class="card__description">{{description}}</p>
+            </a>
           </li>
-        </a>
+
         {{/each}}
       </ul>
   </div>
 </template>
 
 <template name="card">
-  <a href="/">Back</a>
-  <h1>{{title}}</h1>
-  <p>{{ description }}</p>
+  <a href="/" class="button button--close">
+    ✖
+  </a>
+  <div class="card card--view">
+    <h1>{{title}}</h1>
+    <p>{{ description }}</p>
+  </div>
 </template>

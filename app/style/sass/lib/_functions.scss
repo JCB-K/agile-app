@@ -30,3 +30,9 @@
         .ie7 { @content; }
     }
 }
+
+%nolist { // reset list typography styles
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

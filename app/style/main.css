@@ -356,46 +356,14 @@ td,
 th {
   padding: 0; }
 
-/**
- * Respond Mixin
- *
- * Example: @include respond-to(mobile) { float: none; }
- */
-.column {
-  display: inline-block;
-  vertical-align: top;
-  direction: ltr;
-  width: 30%;
-  background: gray;
-  padding: 1em;
-  border-radius: 6px;
-  background-image: -webkit-linear-gradient(bottom, #c7defe, #d6e7fe);
-  border: 0.5px solid #5f72a4; }
-  @media only screen and (max-width: 570px) {
-    .column {
-      width: 100%;
-      margin-top: 1em; } }
+html {
+  box-sizing: border-box; }
 
-.column ul {
-  padding: 0; }
+*, *:before, *:after {
+  box-sizing: inherit; }
 
-.card {
-  width: 90%;
-  padding: 1em;
-  margin-top: 1em;
-  list-style: none;
-  background: #efefef;
-  border: 0.5px solid #5f72a4;
-  border-radius: 3px; }
-
-.card--empty {
-  border: none;
-  padding: 0; }
-
-/* Typography */
 body {
   font-family: 'Open Sans', sans-serif;
-  background: #f2f2f2;
   font-size: 14px; }
 
 p {
@@ -411,5 +379,83 @@ p {
 a {
   color: #141823;
   text-decoration: none; }
+
+/**
+ * Respond Mixin
+ *
+ * Example: @include respond-to(mobile) { float: none; }
+ */
+.column ul, .form {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+body {
+  background: #f2f2f2; }
+
+.wrapper {
+  width: 100%;
+  margin: 1em; }
+
+.field {
+  padding: 1em; }
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+  direction: ltr;
+  width: 32%;
+  background: #5f72a4;
+  padding: 1em;
+  border-radius: 6px;
+  background-image: -webkit-linear-gradient(bottom, #c7defe, #d6e7fe);
+  border: 0.5px solid #272e43; }
+  @media only screen and (max-width: 570px) {
+    .column {
+      width: 100%;
+      margin-top: 1em; } }
+
+.card {
+  padding: 1em; }
+
+.card--empty {
+  border: none;
+  padding: 0; }
+
+.card--column {
+  width: 100%;
+  margin-top: 1em;
+  list-style: none;
+  background: #efefef;
+  border: 0.5px solid #272e43;
+  border-radius: 3px; }
+
+.field {
+  width: 50%; }
+  .field input[type="text"],
+  .field textarea {
+    width: 100%; }
+  @media only screen and (max-width: 570px) {
+    .field {
+      width: 100%; } }
+
+.card--view {
+  background-image: -webkit-linear-gradient(bottom, #c7defe, #d6e7fe);
+  height: 100%; }
+
+/* Interaction */
+.button {
+  background: #3185fb;
+  display: inline-block;
+  border: none;
+  padding: 0.5em; }
+
+input[type="text"],
+textarea {
+  padding: 1em;
+  border: 0.5px solid #272e43; }
+
+textarea {
+  border: 0.5px solid #272e43; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,76 @@
+body{
+background: #f2f2f2;
+}
+.wrapper{
+    width: 100%;
+    margin: $base;
+}
+
+%block{
+    padding: $base;
+
+}
+
+.column{
+    display: inline-block;
+    vertical-align: top;
+    direction: ltr;
+    width: 32%;
+    background: $lightGray;
+    padding: $base;
+    border-radius: 6px;
+    background-image: $blueBackground;
+    border: $border;
+
+    @include respond-to(mobile){
+        width: 100%;
+        margin-top: $base;
+    }
+
+    ul{
+        @extend %nolist;
+    }
+}
+
+.card{
+    padding: $base;
+}
+
+.card--empty{
+    border: none;
+    padding: 0;
+}
+
+.card--column{
+    width: 100%;
+    margin-top: $base;
+    list-style: none;
+    background: #efefef;
+    border: $border;
+    border-radius: 3px;
+
+}
+
+.form{
+    @extend %nolist;
+}
+
+.field{
+    width: 50%;
+    @extend %block;
+
+
+    input[type="text"],
+    textarea{
+        width: 100%;
+    }
+
+    @include respond-to(mobile){
+        width: 100%;
+    }
+}
+
+.card--view{
+    background-image: $blueBackground;
+    height: 100%;
+}

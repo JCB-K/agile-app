@@ -1,4 +1,4 @@
-<template name="layout">
+
 <head>
   <title>Agile App</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -6,8 +6,16 @@
 </head>
 
 <body>
-<div class="wrapper">
-  {{> yield}}
-</div>
+
 </body>
+<template name="layout">
+    <div class="wrapper">
+        <header>
+            <h1>Agile Board</h1>
+        </header>
+
+        {{> yield}}
+
+    </div>
 </template>
+
