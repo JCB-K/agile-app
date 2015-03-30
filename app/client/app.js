@@ -15,7 +15,9 @@ Template.column.helpers({
 
 Template.column.rendered = function(){
   this.$('.column ul').sortable({
+      dropOnEmpty: true,
       connectWith: ".column ul",
+
       stop: function(e, ui){
 
           // Dragged element and its siblings in the target
@@ -72,7 +74,7 @@ Template.columns.events({
       order: 1
     });
 
-    // event.target.reset();
+    event.target.reset();
 
     // Prevent default form submit
     return false;

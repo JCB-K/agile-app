@@ -2,15 +2,13 @@ body{
 background: #f2f2f2;
 }
 .wrapper{
-    width: 100%;
+    width: 95%;
     margin: $base;
 }
 
-%block{
-    padding: $base;
-
+section{
+    margin-top: $base * 4;
 }
-
 .column{
     display: inline-block;
     vertical-align: top;
@@ -37,13 +35,15 @@ background: #f2f2f2;
 }
 
 .card--empty{
+    /* workaround for dropOnEmpty not working in jQuery UI */
     border: none;
     padding: 0;
+    height: 10px;
 }
 
 .card--column{
     width: 100%;
-    margin-top: $base;
+    margin-bottom: $base;
     list-style: none;
     background: #efefef;
     border: $border;
@@ -57,7 +57,7 @@ background: #f2f2f2;
 
 .field{
     width: 50%;
-    @extend %block;
+    padding: $base 0;
 
 
     input[type="text"],

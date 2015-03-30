@@ -394,11 +394,11 @@ body {
   background: #f2f2f2; }
 
 .wrapper {
-  width: 100%;
+  width: 95%;
   margin: 1em; }
 
-.field {
-  padding: 1em; }
+section {
+  margin-top: 4em; }
 
 .column {
   display: inline-block;
@@ -419,19 +419,22 @@ body {
   padding: 1em; }
 
 .card--empty {
+  /* workaround for dropOnEmpty not working in jQuery UI */
   border: none;
-  padding: 0; }
+  padding: 0;
+  height: 10px; }
 
 .card--column {
   width: 100%;
-  margin-top: 1em;
+  margin-bottom: 1em;
   list-style: none;
   background: #efefef;
   border: 0.5px solid #272e43;
   border-radius: 3px; }
 
 .field {
-  width: 50%; }
+  width: 50%;
+  padding: 1em 0; }
   .field input[type="text"],
   .field textarea {
     width: 100%; }
@@ -445,10 +448,13 @@ body {
 
 /* Interaction */
 .button {
-  background: #3185fb;
+  background: #8FFBCA;
   display: inline-block;
-  border: none;
-  padding: 0.5em; }
+  border: 0.5px solid #272e43;
+  border-radius: 3px;
+  padding: 0.5em 2em;
+  font-weight: bold;
+  text-transform: uppercase; }
 
 input[type="text"],
 textarea {
