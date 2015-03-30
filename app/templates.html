@@ -56,8 +56,11 @@
     ✖
   </a>
   <h1>{{title}}</h1>
-    <p>{{ description }}</p>
+  <small><i>Tip: to edit the description, just click it.</i></small>
+    {{#with description}}
+      {{{editable}}}
+    {{/with}}
   </div>
-      <div class="overlay"></div>
+  <div class="overlay"></div>
 
 </template>

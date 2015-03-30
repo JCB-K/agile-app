@@ -80,3 +80,21 @@ Template.columns.events({
     return false;
   }
 });
+
+Template.card.helpers({
+  editable: function(){
+    return '<p class="description" contenteditable="true" tabindex=0>' + this + '</p>';
+  },
+  // cards: function () {
+  //   return Cards.find();
+  // }
+});
+
+Template.card.events({
+  'blur p.description': function(event){
+    var content = $(event.target).html();
+    Cards.update( Router.current().params._id, {
+      $set: { description: content}
+    });
+  }
+});
