@@ -33,9 +33,8 @@
         <li class="card card--empty"></li>
 
         {{#each cards}}
-
             <li class="card card--column">
-            <a href="/card/{{_id}}" class="card__link">
+            <a href="/card/{{_id}}">
               <h2 class="card__title">{{title}}</h2>
               <p class="card__description">{{description}}</p>
               </a>
@@ -47,11 +46,18 @@
 </template>
 
 <template name="card">
+
+  {{>columns}}
+
+
+
+  <div class="card card--view">
   <a href="/" class="button button--close">
     ✖
   </a>
-  <div class="card card--view">
-    <h1>{{title}}</h1>
+  <h1>{{title}}</h1>
     <p>{{ description }}</p>
   </div>
+      <div class="overlay"></div>
+
 </template>

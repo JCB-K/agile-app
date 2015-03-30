@@ -2,8 +2,9 @@ body{
 background: #f2f2f2;
 }
 .wrapper{
-    width: 95%;
-    margin: $base;
+    width: 100%;
+    padding: $base;
+    position: relative;
 }
 
 section{
@@ -70,7 +71,27 @@ section{
     }
 }
 
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 .card--view{
     background-image: $blueBackground;
-    height: 100%;
+    border: $border;
+    border-radius: 6px;
+    min-height: 50%;
+    position: fixed;
+    top: 1em;
+    width: 50%;
+    left: 25%;
+    z-index: 100;
+
+    @include respond-to(mobile){
+        width: 95%;
+        left: 2.5%;
+    }
 }

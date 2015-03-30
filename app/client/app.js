@@ -80,5 +80,3 @@ Template.columns.events({
     return false;
   }
 });
-
-
