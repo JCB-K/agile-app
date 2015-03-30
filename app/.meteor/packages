@@ -2,3 +2,4 @@ autopublish
 insecure
 meteor-platform
 mrt:jquery-ui
+iron:router

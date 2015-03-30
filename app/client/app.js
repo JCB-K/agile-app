@@ -1,11 +1,11 @@
 //client only code
 
-Template.main.helpers({
+Template.columns.helpers({
   columns: function(){
     return Columns.find({});
   }
 });
-Template.list.helpers({
+Template.column.helpers({
   cards: function () {
     return Cards.find({column: this.valueOf().id}, {
       sort: { order: 1 },
@@ -13,7 +13,7 @@ Template.list.helpers({
   }
 });
 
-Template.list.rendered = function(){
+Template.column.rendered = function(){
   this.$('.column ul').sortable({
       connectWith: ".column ul",
       stop: function(e, ui){

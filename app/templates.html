@@ -1,0 +1,29 @@
+<template name="columns">
+  {{#each columns}}
+    {{>column}}
+  {{/each}}
+</template>
+
+<template name="column">
+  <div class="column">
+      <h1>{{this.title}}</h1>
+      <ul>
+      <li></li>
+        {{#each cards}}
+        <a href="/card/{{_id}}">
+          <li class="card">
+            #{{_id}} - {{title}}
+            <h2>Finish this app</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          </li>
+        </a>
+        {{/each}}
+      </ul>
+  </div>
+</template>
+
+<template name="card">
+  <a href="/">Back</a>
+  <h1>{{title}}</h1>
+  <p>{{ description }}</p>
+</template>
