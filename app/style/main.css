@@ -466,13 +466,17 @@ section {
 
 /* Interaction */
 .button {
-  background: #8FFBCA;
   display: inline-block;
+  padding: 0.25em 0.5em;
   border: 0.5px solid #272e43;
   border-radius: 3px;
-  padding: 0.5em 2em;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  background: #c0fde1; }
+
+.button--primary {
+  padding: 0.5em 2em;
+  background: #8FFBCA; }
 
 input[type="text"],
 textarea {

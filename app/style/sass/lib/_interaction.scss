@@ -1,13 +1,18 @@
 /* Interaction */
 
 .button{
-    background: $primary;
     display: inline-block;
+    padding: $base / 4 $base / 2;
     border: $border;
     border-radius: 3px;
-    padding: $base/2 $base*2;
     font-weight: bold;
     text-transform: uppercase;
+    background: lighten($primary, 10);
+}
+
+.button--primary{
+    padding: $base/2 $base*2;
+    background: $primary;
 }
 
 input[type="text"],
