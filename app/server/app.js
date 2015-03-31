@@ -3,11 +3,10 @@
 Meteor.startup(function () {
   if (Cards.find().count() === 0) {
     var items = [
-      {title: "Reduce file size", description: "The app is over 6mb right now, that isn't fun on a 3g connection. We need to reduce that.", order: 0.5, column: 1},
-      {title: "Test on Internet Explorer", description: "We haven't tested the app on IE yet. We also need to decide how which IE versions we will support.", order: 1, column: 1},
-      {title: "User-defined columns", description: "A cool feature would be to let users define their own columns, instead of being stuck with idea/doing/done", order: 2, column: 1},
-      {title: "Inline editing", description: "after creating a card the user should be able to edit the title and description, preferably inline", order: 1, column: 2},
-      {title: "Reordering", description: "The user should be able to reorder items in each column, to indicate priority", order: 1, column: 3}
+      {title: "Welcome to your new agile board!", description: "Get started by adding a card using the form above.", order: 0.5, column: 1},
+      {title: "Dragging", description: "When you've created a few cards, you can get started on one by dragging it to the next column.", order: 1, column: 1},
+      {title: "Editing a card", description: "If you're not satisfied with a description, you can edit it by opening the card and clicking the description. You could fix this speling eror for example.", order: 2, column: 2},
+      {title: "Finished with a card?", description: "When you're finished with a card, you can drag it to this column,", order: 1, column: 3},
       ];
     _.each(items, function (item) {
       Cards.insert({

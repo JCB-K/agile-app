@@ -76,7 +76,6 @@ Template.columns.events({
 
     event.target.reset();
 
-    // Prevent default form submit
     return false;
   }
 });
@@ -85,12 +84,10 @@ Template.card.helpers({
   editable: function(){
     return '<p class="description" contenteditable="true" tabindex=0>' + this + '</p>';
   },
-  // cards: function () {
-  //   return Cards.find();
-  // }
 });
 
 Template.card.events({
+  // Workaround for contenteditable not playing nicely with Reactive
   'blur p.description': function(event){
     var content = $(event.target).html();
     Cards.update( Router.current().params._id, {
