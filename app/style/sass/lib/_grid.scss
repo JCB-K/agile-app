@@ -2,9 +2,9 @@ body{
 background: #f2f2f2;
 }
 .wrapper{
+    position: relative;
     width: 100%;
     padding: $base;
-    position: relative;
 }
 
 section{
@@ -12,14 +12,12 @@ section{
 }
 .column{
     display: inline-block;
-    vertical-align: top;
-    direction: ltr;
     width: 32%;
-    background: $lightGray;
+    vertical-align: top;
     padding: $base;
     border-radius: 6px;
-    background-image: $blueBackground;
     border: $border;
+    background-image: $blueBackground;
 
     @include respond-to(mobile){
         width: 100%;
@@ -45,11 +43,10 @@ section{
 .card--column{
     width: 100%;
     margin-bottom: $base;
-    list-style: none;
-    background: #efefef;
     border: $border;
     border-radius: 3px;
-
+    list-style: none;
+    background: #efefef;
 }
 
 .form{
@@ -80,15 +77,16 @@ section{
     background-color: rgba(0, 0, 0, 0.7);
 }
 .card--view{
-    background-image: $blueBackground;
-    border: $border;
-    border-radius: 6px;
-    min-height: 50%;
     position: fixed;
     top: 1em;
     width: 50%;
     left: 25%;
+    min-height: 50%;
     z-index: 100;
+    border: $border;
+    border-radius: 6px;
+    background-image: $blueBackground;
+
 
     @include respond-to(mobile){
         width: 95%;

@@ -1,0 +1,21 @@
+/* Interaction */
+
+.button{
+    background: $primary;
+    display: inline-block;
+    border: $border;
+    border-radius: 3px;
+    padding: $base/2 $base*2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+textarea{
+    padding: $base;
+    border: $border;
+}
+
+textarea{
+    border: $border;
+}
